@@ -50,7 +50,7 @@ def imprime_mensagem_abertura():
 #Como a função irá inicializar a palavra secreta, ela deve retorná-la, assim teremos acesso à palavra fora da função.
 #Ao chamar a função, como ela irá retornar a palavra secreta, será guardada em uma variável
 def carrega_palavra_secreta():
-    arquivo = open("Python\palavras.txt", "r")
+    arquivo = open("palavras.txt", "r") 
     palavras = []
 
     for linha in arquivo:
