@@ -185,4 +185,3 @@ def imprima_mensagem_perdedor(palavra_secreta):
 #Nome do ambiente principal do programa
 if __name__ == "__main__":
     jogar()
-    
