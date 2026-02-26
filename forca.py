@@ -15,6 +15,7 @@ def jogar():
     enforcou = False
     acertou = False
     erros = 0
+    letras_erradas = []
 
     #Loop para que aconteça toda as comparações necessárias do jogo
     while not enforcou and not acertou:
@@ -27,7 +28,8 @@ def jogar():
 
         else:
             erros += 1
-            desenha_forca(erros)
+            letras_erradas.append(chute)
+            desenha_forca(erros, letras_erradas)
 
         enforcou = erros == 7
         acertou = "_" not in letras_acertadas
@@ -110,8 +112,9 @@ def imprima_mensagem_vencedor():
 #Para que a contagem aconteça e seja impresso partes referente a quantidade de erros
 #a função precisa receber o paramêtro a quantidade de erros que o usuário já cometeu
 #para que assim a comparação aconteça
-def desenha_forca(erros):
-    print("  _______     ")
+def desenha_forca(erros, letras_erradas):
+    texto_erros = "Erros: " + " ".join(letras_erradas)
+    print("  _______      {}".format(texto_erros))
     print(" |/      |    ")
 
     if(erros == 1):
