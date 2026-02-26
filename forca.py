@@ -1,4 +1,5 @@
 import random
+from pathlib import Path
 
 #Função do Jogo
 def jogar():
@@ -45,12 +46,14 @@ def imprime_mensagem_abertura():
     print("*********************************")
     print("** Bem vindo ao jogo da Forca! **")
     print("*********************************")
+    print("Acerte o nome da Fruta para ganhar o jogo!")
 
 #Essa função será responsável pela leitura do arquivo e inicialização da palavra secreta.
 #Como a função irá inicializar a palavra secreta, ela deve retorná-la, assim teremos acesso à palavra fora da função.
 #Ao chamar a função, como ela irá retornar a palavra secreta, será guardada em uma variável
 def carrega_palavra_secreta():
-    arquivo = open("palavras.txt", "r") 
+    caminho_arquivo = Path(__file__).with_name("palavras.txt")
+    arquivo = open(caminho_arquivo, "r", encoding="utf-8")
     palavras = []
 
     for linha in arquivo:
@@ -118,40 +121,40 @@ def desenha_forca(erros):
         print(" |            ")
 
     if(erros == 2):
-        print(" |      (_)   ")
-        print(" |      \     ")
+        print(" |       (_)   ")
+        print(" |       \\    ")
         print(" |            ")
         print(" |            ")
 
     if(erros == 3):
-        print(" |      (_)   ")
-        print(" |      \|    ")
+        print(" |       (_)   ")
+        print(" |       \\|    ")
         print(" |            ")
         print(" |            ")
 
     if(erros == 4):
-        print(" |      (_)   ")
-        print(" |      \|/   ")
+        print(" |       (_)   ")
+        print(" |       \\|/   ")
         print(" |            ")
         print(" |            ")
 
     if(erros == 5):
-        print(" |      (_)   ")
-        print(" |      \|/   ")
-        print(" |       |    ")
+        print(" |       (_)   ")
+        print(" |       \\|/   ")
+        print(" |        |    ")
         print(" |            ")
 
     if(erros == 6):
-        print(" |      (_)   ")
-        print(" |      \|/   ")
-        print(" |       |    ")
-        print(" |      /     ")
+        print(" |       (_)   ")
+        print(" |       \\|/   ")
+        print(" |        |    ")
+        print(" |       /    ")
 
     if (erros == 7):
-        print(" |      (_)   ")
-        print(" |      \|/   ")
-        print(" |       |    ")
-        print(" |      / \   ")
+        print(" |       (_)   ")
+        print(" |       \\|/   ")
+        print(" |        |    ")
+        print(" |       / \   ")
 
     print(" |            ")
     print("_|___         ")
