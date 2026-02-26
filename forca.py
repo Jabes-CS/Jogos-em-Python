@@ -169,7 +169,7 @@ def desenha_forca(erros, letras_erradas):
 #para que o usuário saiba qual era a palavra_secreta
 #Mais para isso acontecer, essa função preisa receber como paramêtro a palavra_secreta para que assim ela seja impressa
 def imprima_mensagem_perdedor(palavra_secreta):
-    print("Puxa, você foi enforcado!")
+    print("Poxa, você foi enforcado!")
     print("A palavra era {}".format(palavra_secreta))
     print("    _______________         ")
     print("   /               \       ")
